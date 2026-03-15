@@ -1,0 +1,48 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Bike Extensions Registry",
+  "description": "Schema for the Bike extensions registry file",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "required": ["id", "version", "download_url"],
+    "properties": {
+      "id": {
+        "type": "string",
+        "description": "Unique extension identifier",
+        "pattern": "^[a-z0-9][a-z0-9._-]*$"
+      },
+      "version": {
+        "type": "string",
+        "description": "Semantic version of the extension",
+        "pattern": "^\\d+\\.\\d+\\.\\d+$"
+      },
+      "download_url": {
+        "type": "string",
+        "description": "URL to the .bkext.zip file",
+        "format": "uri",
+        "pattern": "\\.bkext\\.zip$"
+      },
+      "min_api_version": {
+        "type": "string",
+        "description": "Minimum Bike API version required",
+        "pattern": "^\\d+\\.\\d+\\.\\d+$"
+      },
+      "description": {
+        "type": "string",
+        "description": "Short description of the extension"
+      },
+      "author": {
+        "type": "string",
+        "description": "Extension author name"
+      },
+      "url": {
+        "type": "string",
+        "description": "URL to the extension's homepage or repository",
+        "format": "uri"
+      }
+    },
+    "additionalProperties": false
+  },
+  "uniqueItems": true
+}
