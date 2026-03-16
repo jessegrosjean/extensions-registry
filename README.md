@@ -52,7 +52,7 @@ my-extension.bkext.zip
 
 ### Publishing a new version
 
-The [Bike Extension Kit](https://github.com/jessegrosjean/bike-extension-kit) provides commands that automate the release and submission process:
+The [Bike Extension Kit](https://github.com/bike-outliner/extension-kit) provides commands that automate the release and submission process:
 
 ```sh
 npx bike-ext build
@@ -63,12 +63,12 @@ npx bike-ext submit my-extension    # forks this repo and opens a PR automatical
 
 If you prefer to submit manually:
 
-1. Build and package your extension (see the [Sharing Extensions](https://github.com/jessegrosjean/bike-extension-kit#sharing-extensions) guide)
+1. Build and package your extension (see the [Sharing Extensions](https://github.com/bike-outliner/extension-kit/docs/sharing-extensions.md) guide)
 2. Create a GitHub Release on your repo and attach the `.bkext.zip`
 3. Update your entry in `extensions.json` with the new `version` and `download_url`
 4. Open a pull request
 
 ## Related
 
-- [Bike Extension Kit](https://github.com/jessegrosjean/bike-extension-kit) — tools and templates for building Bike extensions
+- [Bike Extension Kit](https://github.com/bike-outliner/extension-kit) — tools and templates for building Bike extensions
 - [Bike Guide: Using Extensions](https://bikeguide.hogbaysoftware.com/bike-2-preview/using-bike/using-extensions)
